@@ -1,4 +1,4 @@
-type TechnologiesType = {
+export type TechnologiesType = {
     id: number
     title: string
 }
