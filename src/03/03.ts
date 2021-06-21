@@ -50,3 +50,7 @@ export const creatGreeting= (city:CityType) =>{
 export const refactoringStreet =(address:AddressesType, title:string) =>{
     address.street.title= title
 }
+
+export const getBuildingStaffCount = (buildings: GovernmentBuildingType[], staff: number)=>{
+    return buildings.filter (b => b.staffCount> staff)
+}

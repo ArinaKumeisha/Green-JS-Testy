@@ -1,5 +1,13 @@
 import {CityType} from "./02-02";
-import {addMoneyBudget, addStaffCount, creatGreeting, deleteStaffCount, refactoringStreet, repairHouse} from "../03/03";
+import {
+    addMoneyBudget,
+    addStaffCount,
+    creatGreeting,
+    deleteStaffCount,
+    getBuildingStaffCount,
+    refactoringStreet,
+    repairHouse
+} from "../03/03";
 
 
 let city: CityType;
@@ -96,4 +104,11 @@ test("Greeting should be correct", () =>{
 test ("refactoring street", ()=>{
     refactoringStreet(city.houses[0].address, "My street")
     expect(city.houses[0].address.street.title).toBe("My street")
+})
+
+
+test("buildings with correct staffCount", () =>{
+    let building=getBuildingStaffCount(city.governmentBuildings, 250)
+    expect(building.length).toBe(1)
+    expect(building[0].type).toBe("FIRE-STATION")
 })
