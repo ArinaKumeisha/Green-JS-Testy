@@ -48,3 +48,8 @@ test("should be corresponding users", () => {
     expect(users["14"].name).toBe("Dasha")
     expect(users["1"].id).toBe(1)
 })
+test("should delete user", () => {
+    delete users["101"]
+    expect(users["101"]).toBe(undefined)
+
+})
