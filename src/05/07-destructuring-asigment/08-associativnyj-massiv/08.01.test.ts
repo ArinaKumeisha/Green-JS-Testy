@@ -29,7 +29,7 @@ test("should update corresponding user", () => {
 
 })
 
-test("update name", () => {
+test("update name", () => {    //
     users["1"].name = "Tatyana"
     expect(users["1"].name).toBe("Tatyana")
 })
