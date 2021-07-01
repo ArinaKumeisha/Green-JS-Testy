@@ -46,3 +46,7 @@ const dev4=people.map(man => ({
 
 
 const message=people.map(man=> `Hello ${man.name.split(" ")[0]}. Welcome!`)
+
+export const createGreetingMessage =( people: PeopleType[]) => {
+   return people.map(man=> `Hello ${man.name.split(" ")[0]}. Welcome!`)
+}

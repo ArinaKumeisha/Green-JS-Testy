@@ -7,7 +7,7 @@ import {
     getBuildingStaffCount,
     refactoringStreet,
     repairHouse
-} from "../03/03";
+} from "../03/03.02";
 
 
 let city: CityType;
