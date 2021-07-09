@@ -12,10 +12,11 @@ beforeEach(() => {
             "101": {id: 101, name: "Arina"},
             "1234": {id: 1234, name: "Alex"},
             "14": {id: 14, name: "Dasha"},
-            "1": {id: 1, name: "Tanya"},
+            "1": {id: 1, name: "Katya"},
         }
     }
 )
+
 
 /*let user={id:444, name: "Anna"}
 users[user.id]=user
@@ -23,9 +24,9 @@ delete users[user.id]
 users[user.id].name="Alla"*/
 
 test("should update corresponding user", () => {
-    expect(users["1"]).toBe("Tanya")
-    expect(users["101"]).toBe("Arina")
-    expect(users["14"]).toBe("Dasha")
+    expect(users["1"].name).toBe("Katya")
+    expect(users["101"].name).toBe("Arina")
+    expect(users["14"].name).toBe("Dasha")
 
 })
 
@@ -46,7 +47,9 @@ test("should be corresponding users", () => {
     expect(users["101"].id).toBe(101)
     expect(users["1234"].name).toBe("Alex")
     expect(users["14"].name).toBe("Dasha")
-    expect(users["1"].id).toBe(1)
+    expect(users["1"]).toEqual({id: 1, name: "Katya"})
+    expect(users["14"]).toEqual({id: 14, name: "Dasha"})
+    expect(users["1234"]).toEqual({id: 1234, name: "Alex"})
 })
 test("should delete user", () => {
     delete users["101"]

@@ -8,11 +8,11 @@ export const userObj = {
 }
 
 
+
 export const usersArray = [
     {id: 101, name: "Arina"},
     {id: 1234, name: "Alex"},
     {id: 14, name: "Dasha"},
     {id: 1, name: "Tanya"},
 ]
-
 
